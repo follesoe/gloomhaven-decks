@@ -1,13 +1,38 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Sofadi One', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  outline: black;
 }
-
+  
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.background-map {
+  background: url('/gloomhaven/images/world-map/gloomhaven-map-orig.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+label {
+  text-shadow: 3px 3px 6px black;
+}
+
+input {
+  font-size: 32px;
+  background-color: transparent;
+  text-shadow: 3px 3px 6px black;
+}
+
+input[type='number'] {
+  text-align: right;
+}
+
+input:focus {
+  outline: none;
 }

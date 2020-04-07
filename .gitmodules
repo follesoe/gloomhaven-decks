@@ -1,0 +1,3 @@
+[submodule "public/gloomhaven"]
+	path = public/gloomhaven
+	url = https://github.com/any2cards/gloomhaven.git
