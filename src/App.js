@@ -33,7 +33,7 @@ class BattleGoals extends React.Component {
     this.state = {
       deck: [],
       shuffledDeck: [],
-      pickedDeck: []
+      drawnDeck: []
     };
     this.drawCard = this.drawCard.bind(this);
   }
@@ -46,7 +46,7 @@ class BattleGoals extends React.Component {
           this.setState({ 
             deck: deck,
             shuffledDeck: shuffleDeck(deck),
-            pickedDeck: []
+            drawnDeck: []
           });
         },
         (error) => {
@@ -58,19 +58,19 @@ class BattleGoals extends React.Component {
     const shuffledDeck = this.state.shuffledDeck.length > 0 ?
       this.state.shuffledDeck : shuffleDeck(this.state.deck);
 
-    const pickedDeck = this.state.shuffledDeck.length > 0 ?
-      this.state.pickedDeck : [];
+    const drawnDeck = this.state.shuffledDeck.length > 0 ?
+      this.state.drawnDeck : [];
 
-      this.setState({
+    this.setState({
       deck: this.state.deck,
-      pickedDeck: [shuffledDeck[0], ...pickedDeck],
+      drawnDeck: [shuffledDeck[0], ...drawnDeck],
       shuffledDeck: [...shuffledDeck.slice(1)]
     });
   }
   render() {
-    const selectedCard = this.state.pickedDeck.length  === 0 ? null : this.state.pickedDeck[0];
-    const selectedCardElem = selectedCard === null ? <span></span> :
-      <Card name={selectedCard.name} image={process.env.PUBLIC_URL + 'gloomhaven/images/' + selectedCard.image } />
+    const drawnCards = this.state.drawnDeck.map((card) =>
+      <Card key={card.name} image={process.env.PUBLIC_URL + 'gloomhaven/images/' + card.image } name={card.name} />
+    );
 
     return (
       <div className="flex flex-wrap flex-row m-6">
@@ -78,7 +78,7 @@ class BattleGoals extends React.Component {
           name="Draw Battle Card" 
           onClick={this.drawCard}
           image={process.env.PUBLIC_URL + 'gloomhaven/images/battle-goals/battlegoal-back.png' } />
-        {selectedCardElem}
+        {drawnCards}
       </div>
     )
   }
