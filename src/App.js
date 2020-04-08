@@ -14,23 +14,81 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header class="m-8">
+        <header className="m-8">
           <label>
             Available items: 
             <input type="number" min="1" max="164" value={this.state.itemsDeckTo} onChange={this.handleChange} />
           </label>
         </header>
         <ItemsDeck to={this.state.itemsDeckTo} />
+        <BattleGoals />
       </div>
     );
   }
 }
 
-class ItemsDeck extends React.Component{
+class BattleGoals extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      cards: []
+      deck: [],
+      shuffledDeck: [],
+      pickedDeck: []
+    };
+    this.drawCard = this.drawCard.bind(this);
+  }
+  componentDidMount() {
+    fetch(process.env.PUBLIC_URL + 'gloomhaven/data/battle-goals.js')
+      .then(res => res.json())
+      .then(
+        (result) => {
+          const deck = result.filter(c => c.name !== 'battlegoal-back');
+          this.setState({ 
+            deck: deck,
+            shuffledDeck: shuffleDeck(deck),
+            pickedDeck: []
+          });
+        },
+        (error) => {
+          console.error(error);
+        }
+      )
+  }
+  drawCard() {
+    const shuffledDeck = this.state.shuffledDeck.length > 0 ?
+      this.state.shuffledDeck : shuffleDeck(this.state.deck);
+
+    const pickedDeck = this.state.shuffledDeck.length > 0 ?
+      this.state.pickedDeck : [];
+
+      this.setState({
+      deck: this.state.deck,
+      pickedDeck: [shuffledDeck[0], ...pickedDeck],
+      shuffledDeck: [...shuffledDeck.slice(1)]
+    });
+  }
+  render() {
+    const selectedCard = this.state.pickedDeck.length  === 0 ? null : this.state.pickedDeck[0];
+    const selectedCardElem = selectedCard === null ? <span></span> :
+      <Card name={selectedCard.name} image={process.env.PUBLIC_URL + 'gloomhaven/images/' + selectedCard.image } />
+
+    return (
+      <div className="flex flex-wrap flex-row m-6">
+        <Card 
+          name="Draw Battle Card" 
+          onClick={this.drawCard}
+          image={process.env.PUBLIC_URL + 'gloomhaven/images/battle-goals/battlegoal-back.png' } />
+        {selectedCardElem}
+      </div>
+    )
+  }
+}
+
+class ItemsDeck extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      deck: []
     };
   }
   componentDidMount() {
@@ -38,17 +96,17 @@ class ItemsDeck extends React.Component{
       .then(res => res.json())
       .then(
         (result) => {
-          const items = result
-            .filter(item => item.name.match(/item #[1-9]\d{0,3}/))
-            .map(function(item) {
+          const cards = result
+            .filter(card => card.name.match(/item #[1-9]\d{0,3}/))
+            .map(function(card) {
               return {
-                number: parseInt(item.name.match(/(\d+)/)[0]),
-                name: item.name,
-                image: process.env.PUBLIC_URL + 'gloomhaven/images/' + item.image
+                number: parseInt(card.name.match(/(\d+)/)[0]),
+                name: card.name,
+                image: process.env.PUBLIC_URL + 'gloomhaven/images/' + card.image
               }
             });
           this.setState({ 
-            cards: items
+            deck: cards
           });
         },
         (error) => {
@@ -57,11 +115,11 @@ class ItemsDeck extends React.Component{
       )
   }
   render() {
-    const cards = this.state.cards.filter(item => item.number <= this.props.to).map((item) =>
-      <Card key={item.number} image={item.image} name={item.name} />
+    const cards = this.state.deck.filter(card => card.number <= this.props.to).map((card) =>
+      <Card key={card.number} image={card.image} name={card.name} />
     );
     return (
-      <div className="flex flex-wrap flex-row flex-grow flex-shrink">
+      <div className="flex flex-wrap flex-row m-6">
         {cards}
       </div>
     );
@@ -69,11 +127,27 @@ class ItemsDeck extends React.Component{
 }
 
 function Card(props) {
+  function handleClick(e) {
+    e.preventDefault();
+    if (props.onClick) {
+      props.onClick(props.name);
+    }
+  }
   return (
-    <div className="m-2 Card">
+    <div className="m-2 Card" onClick={handleClick}>
       <img className="Card-face" src={props.image} alt={props.name} />
     </div>
   );
+}
+
+// Fisher–Yates shuffle
+function shuffleDeck(deck) {
+  var newDeck = [...deck];
+    for (let i = newDeck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
+    }
+  return newDeck;
 }
 
 export default App;
