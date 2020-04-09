@@ -69,7 +69,7 @@ class BattleGoals extends React.Component {
   }
   render() {
     const drawnCards = this.state.drawnDeck.map((card) =>
-      <Card key={card.name} image={process.env.PUBLIC_URL + 'gloomhaven/images/' + card.image } name={card.name} />
+      <Card key={card.name} image={process.env.PUBLIC_URL + '/gloomhaven/images/' + card.image } name={card.name} />
     );
 
     return (
@@ -77,7 +77,7 @@ class BattleGoals extends React.Component {
         <Card 
           name="Draw Battle Card" 
           onClick={this.drawCard}
-          image={process.env.PUBLIC_URL + 'gloomhaven/images/battle-goals/battlegoal-back.png' } />
+          image={process.env.PUBLIC_URL + '/gloomhaven/images/battle-goals/battlegoal-back.png' } />
         {drawnCards}
       </div>
     )
@@ -102,7 +102,7 @@ class ItemsDeck extends React.Component {
               return {
                 number: parseInt(card.name.match(/(\d+)/)[0]),
                 name: card.name,
-                image: process.env.PUBLIC_URL + 'gloomhaven/images/' + card.image
+                image: process.env.PUBLIC_URL + '/gloomhaven/images/' + card.image
               }
             });
           this.setState({ 
