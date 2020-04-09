@@ -10,7 +10,12 @@ jobs:
       matrix:
         node-version: [12.x]
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Checkout submodules
+      uses: textbook/git-checkout-submodule-action@2.1.1
+    - name: Delete files from public folder
+      run: rm -rf public/gloomhaven/xwc
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:

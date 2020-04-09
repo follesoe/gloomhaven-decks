@@ -1,6 +1,6 @@
 {
   "name": "gloomhaven-decks",
-  "description": "A small web app to function as the items deck and the batle goals deck when playing Gloomhaven.",
+  "description": "A small web app to function as the items deck and the battle goals deck when playing Gloomhaven.",
   "author": {
     "name": "Jonas Follesø",
     "email": "jonas@follesoe.no"
@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "/repo-name",
+  "homepage": "/gloomhaven-decks",
   "eslintConfig": {
     "extends": "react-app"
   },
