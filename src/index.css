@@ -14,11 +14,6 @@ code {
     monospace;
 }
 
-.background-map {
-  background: url('/gloomhaven/images/world-map/gloomhaven-map-orig.png') no-repeat center center fixed;
-  background-size: cover;
-}
-
 label {
   text-shadow: 3px 3px 6px black;
 }
