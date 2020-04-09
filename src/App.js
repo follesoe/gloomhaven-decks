@@ -38,7 +38,7 @@ class BattleGoals extends React.Component {
     this.drawCard = this.drawCard.bind(this);
   }
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + 'gloomhaven/data/battle-goals.js')
+    fetch(process.env.PUBLIC_URL + '/gloomhaven/data/battle-goals.js')
       .then(res => res.json())
       .then(
         (result) => {
@@ -92,7 +92,7 @@ class ItemsDeck extends React.Component {
     };
   }
   componentDidMount() {
-    fetch(process.env.PUBLIC_URL + 'gloomhaven/data/items.js')
+    fetch(process.env.PUBLIC_URL + '/gloomhaven/data/items.js')
       .then(res => res.json())
       .then(
         (result) => {
