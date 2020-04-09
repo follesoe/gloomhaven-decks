@@ -1,6 +1,15 @@
 {
   "name": "gloomhaven-decks",
+  "description": "A small web app to function as the items deck and the batle goals deck when playing Gloomhaven.",
+  "author": {
+    "name": "Jonas Follesø",
+    "email": "jonas@follesoe.no"
+  },
+  "bugs": {
+    "url": "https://github.com/follesoe/gloomhaven-decks/issues"
+  },
   "version": "0.1.0",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -16,6 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "/repo-name",
   "eslintConfig": {
     "extends": "react-app"
   },
