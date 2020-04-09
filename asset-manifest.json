@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gloomhaven-decks/static/css/main.38609b28.chunk.css",
+    "main.css": "/gloomhaven-decks/static/css/main.a0e21076.chunk.css",
     "main.js": "/gloomhaven-decks/static/js/main.000cf778.chunk.js",
     "main.js.map": "/gloomhaven-decks/static/js/main.000cf778.chunk.js.map",
     "runtime-main.js": "/gloomhaven-decks/static/js/runtime-main.bf3d1057.js",
@@ -8,15 +8,15 @@
     "static/js/2.16255246.chunk.js": "/gloomhaven-decks/static/js/2.16255246.chunk.js",
     "static/js/2.16255246.chunk.js.map": "/gloomhaven-decks/static/js/2.16255246.chunk.js.map",
     "index.html": "/gloomhaven-decks/index.html",
-    "precache-manifest.d2cab7154bbcf38f4afbf276cf3352ad.js": "/gloomhaven-decks/precache-manifest.d2cab7154bbcf38f4afbf276cf3352ad.js",
+    "precache-manifest.9a333976a0924110b26cfbb39de2786d.js": "/gloomhaven-decks/precache-manifest.9a333976a0924110b26cfbb39de2786d.js",
     "service-worker.js": "/gloomhaven-decks/service-worker.js",
-    "static/css/main.38609b28.chunk.css.map": "/gloomhaven-decks/static/css/main.38609b28.chunk.css.map",
+    "static/css/main.a0e21076.chunk.css.map": "/gloomhaven-decks/static/css/main.a0e21076.chunk.css.map",
     "static/js/2.16255246.chunk.js.LICENSE.txt": "/gloomhaven-decks/static/js/2.16255246.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bf3d1057.js",
     "static/js/2.16255246.chunk.js",
-    "static/css/main.38609b28.chunk.css",
+    "static/css/main.a0e21076.chunk.css",
     "static/js/main.000cf778.chunk.js"
   ]
 }

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2b71e36d693016d040b7fcfb1ea3af05",
+    "revision": "26638c51ec477d6175050aafefbe9a04",
     "url": "/gloomhaven-decks/index.html"
   },
   {
-    "revision": "71e84c0dc23c331e33e9",
-    "url": "/gloomhaven-decks/static/css/main.38609b28.chunk.css"
+    "revision": "47378095a3c25f409d8f",
+    "url": "/gloomhaven-decks/static/css/main.a0e21076.chunk.css"
   },
   {
     "revision": "0c5564d39423e9534edb",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/gloomhaven-decks/static/js/2.16255246.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "71e84c0dc23c331e33e9",
+    "revision": "47378095a3c25f409d8f",
     "url": "/gloomhaven-decks/static/js/main.000cf778.chunk.js"
   },
   {
