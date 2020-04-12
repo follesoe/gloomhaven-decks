@@ -9,7 +9,7 @@ function Card(props) {
     }
   }
   return (
-    <div className="m-2 Card" onClick={handleClick}>
+    <div className="m-2 Card Card-pop Card-shadow" onClick={handleClick}>
       <img className="Card-face" src={props.image} alt={props.name} />
     </div>
   );

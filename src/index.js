@@ -12,18 +12,16 @@ import AttackModifierDeck from './AttackModifierDeck';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Router>
-      <Switch>
-        <Route path="/monster">
-          <AttackModifierDeck />
-        </Route>
-        <Route exact path="/">
-          <ItemsApp />
-        </Route>
-      </Switch>
-    </Router>
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route path="/monster">
+        <AttackModifierDeck type="monster" />
+      </Route>
+      <Route exact path="/">
+        <ItemsApp />
+      </Route>
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );
 

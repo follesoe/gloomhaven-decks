@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import shuffleDeck from './shuffleDeck';
 import './App.css';
 
 class BattleGoalsDeck extends React.Component {
@@ -57,16 +58,6 @@ class BattleGoalsDeck extends React.Component {
       </div>
     )
   }
-}
-
-// Fisher–Yates shuffle
-function shuffleDeck(deck) {
-  var newDeck = [...deck];
-    for (let i = newDeck.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [newDeck[i], newDeck[j]] = [newDeck[j], newDeck[i]];
-    }
-  return newDeck;
 }
 
 export default BattleGoalsDeck;

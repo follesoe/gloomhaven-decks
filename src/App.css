@@ -2,9 +2,12 @@
   width: 180px;
   border-radius: 10px;
   transition: all 0.1s ease-in-out;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   background: none;
   cursor: grab;
+}
+.Card-shadow {
+  border: solid 1px black;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 .Card-back,
@@ -12,8 +15,22 @@
   border-radius: 10px;
 }
 
-.Card:hover {
+.Card-pop:hover {
   box-shadow: 20px 5px 5px rgba(0, 0, 0, 0.5);
   transform:scale(1.25) rotate(-3deg);
   z-index: 100;
+}
+
+.Card-anim {
+  animation-name: slide-in-1;
+  animation-duration: 500ms;
+}
+
+@keyframes slide-in-1 {
+  from {
+    transform: scale(1.4) translateX(-80px) translateY(-5px) rotate(-5deg);
+  }
+  to {
+    transform: scale(1.0) translateX(10px) translateY(3px) rotate(5deg);
+  }
 }

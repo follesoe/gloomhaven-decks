@@ -15,7 +15,7 @@ class ItemsApp extends React.Component {
   }
   render() {
     return (
-      <div class="background-map h-screen">
+      <div className="background-map h-screen">
         <header>
           <label>
             Available items:
