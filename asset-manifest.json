@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/gloomhaven-decks/static/css/main.a0e21076.chunk.css",
-    "main.js": "/gloomhaven-decks/static/js/main.000cf778.chunk.js",
-    "main.js.map": "/gloomhaven-decks/static/js/main.000cf778.chunk.js.map",
+    "main.css": "/gloomhaven-decks/static/css/main.aece9c51.chunk.css",
+    "main.js": "/gloomhaven-decks/static/js/main.18001443.chunk.js",
+    "main.js.map": "/gloomhaven-decks/static/js/main.18001443.chunk.js.map",
     "runtime-main.js": "/gloomhaven-decks/static/js/runtime-main.bf3d1057.js",
     "runtime-main.js.map": "/gloomhaven-decks/static/js/runtime-main.bf3d1057.js.map",
-    "static/js/2.16255246.chunk.js": "/gloomhaven-decks/static/js/2.16255246.chunk.js",
-    "static/js/2.16255246.chunk.js.map": "/gloomhaven-decks/static/js/2.16255246.chunk.js.map",
+    "static/js/2.6c0515be.chunk.js": "/gloomhaven-decks/static/js/2.6c0515be.chunk.js",
+    "static/js/2.6c0515be.chunk.js.map": "/gloomhaven-decks/static/js/2.6c0515be.chunk.js.map",
     "index.html": "/gloomhaven-decks/index.html",
-    "precache-manifest.9a333976a0924110b26cfbb39de2786d.js": "/gloomhaven-decks/precache-manifest.9a333976a0924110b26cfbb39de2786d.js",
+    "precache-manifest.ab2b54fdb3cf57c3e92b2295e7b58184.js": "/gloomhaven-decks/precache-manifest.ab2b54fdb3cf57c3e92b2295e7b58184.js",
     "service-worker.js": "/gloomhaven-decks/service-worker.js",
-    "static/css/main.a0e21076.chunk.css.map": "/gloomhaven-decks/static/css/main.a0e21076.chunk.css.map",
-    "static/js/2.16255246.chunk.js.LICENSE.txt": "/gloomhaven-decks/static/js/2.16255246.chunk.js.LICENSE.txt"
+    "static/css/main.aece9c51.chunk.css.map": "/gloomhaven-decks/static/css/main.aece9c51.chunk.css.map",
+    "static/js/2.6c0515be.chunk.js.LICENSE.txt": "/gloomhaven-decks/static/js/2.6c0515be.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.bf3d1057.js",
-    "static/js/2.16255246.chunk.js",
-    "static/css/main.a0e21076.chunk.css",
-    "static/js/main.000cf778.chunk.js"
+    "static/js/2.6c0515be.chunk.js",
+    "static/css/main.aece9c51.chunk.css",
+    "static/js/main.18001443.chunk.js"
   ]
 }
