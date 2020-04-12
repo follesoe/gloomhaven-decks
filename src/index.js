@@ -11,7 +11,7 @@ import AttackModifierDeck from './AttackModifierDeck';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route path="/monster">
         <AttackModifierDeck type="monster" />
