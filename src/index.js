@@ -13,10 +13,13 @@ import * as serviceWorker from './serviceWorker';
 ReactDOM.render(
   <Router basename={process.env.PUBLIC_URL}>
     <Switch>
-      <Route path="/monster">
+      <Route path={process.env.PUBLIC_URL + '/monster'}>
         <AttackModifierDeck type="monster" />
       </Route>
-      <Route exact path="/">
+      <Route path='/monster'>
+        <AttackModifierDeck type="monster" />
+      </Route>
+      <Route exact path='/'>
         <ItemsApp />
       </Route>
     </Switch>
