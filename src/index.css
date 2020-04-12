@@ -8,7 +8,7 @@ body {
   color: white;
   outline: black;
 }
-  
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -30,4 +30,8 @@ input[type='number'] {
 
 input:focus {
   outline: none;
+}
+
+.bg-greenscreen {
+  background-color: #00ff00;
 }
