@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import {
   HashRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import './index.css';
 import ItemsApp from './App';
